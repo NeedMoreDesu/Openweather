@@ -20,7 +20,7 @@ extension JsonParser {
     }
 }
 
-extension NetworkManager {
+extension NetworkManager: Forecast5Router {
     class func forecast5(params: [URLs.Params], completion: @escaping ((_ forecast5: [Forecast]?, _ error: Error?) -> Void)) {
         let urlString = URLs.formRequestString(baseRequest: URLs.forecast5, params: params)
         NetworkManager.jsonRequest(urlString: urlString, method: .GET) { (json, error) in

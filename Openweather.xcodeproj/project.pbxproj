@@ -23,6 +23,10 @@
 		67A86D112091FA6000223512 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A86D102091FA6000223512 /* CoreData.framework */; };
 		67A86D142091FA7400223512 /* Main.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D122091FA7400223512 /* Main.xcdatamodeld */; };
 		67A86D162091FC3400223512 /* ForecastRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D152091FC3400223512 /* ForecastRepository.swift */; };
+		67A86D1C209205E200223512 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D1B209205E200223512 /* HomeUseCase.swift */; };
+		67A86D1E2092086000223512 /* UseCaseRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D1D2092086000223512 /* UseCaseRequirements.swift */; };
+		67A86D202092089200223512 /* MapUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D1F2092089200223512 /* MapUseCase.swift */; };
+		67A86D22209208EC00223512 /* DetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D21209208EC00223512 /* DetailsUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		67A86D102091FA6000223512 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		67A86D132091FA7400223512 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		67A86D152091FC3400223512 /* ForecastRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastRepository.swift; sourceTree = "<group>"; };
+		67A86D1B209205E200223512 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
+		67A86D1D2092086000223512 /* UseCaseRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseRequirements.swift; sourceTree = "<group>"; };
+		67A86D1F2092089200223512 /* MapUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapUseCase.swift; sourceTree = "<group>"; };
+		67A86D21209208EC00223512 /* DetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 				67A86CFC2091CBDE00223512 /* Presentation */,
 				67A86D0E2091F97D00223512 /* Database */,
 				67A86CFE2091CC5F00223512 /* Network */,
+				67A86D1A2092059E00223512 /* UseCase */,
 				67A86CFD2091CBF300223512 /* Model */,
 				67A86CDB2091CB1300223512 /* AppDelegate.swift */,
 				67A86CE22091CB1400223512 /* Assets.xcassets */,
@@ -205,6 +214,17 @@
 				67A86D072091DDC900223512 /* JsonParser.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		67A86D1A2092059E00223512 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				67A86D1D2092086000223512 /* UseCaseRequirements.swift */,
+				67A86D1B209205E200223512 /* HomeUseCase.swift */,
+				67A86D1F2092089200223512 /* MapUseCase.swift */,
+				67A86D21209208EC00223512 /* DetailsUseCase.swift */,
+			);
+			path = UseCase;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +331,8 @@
 				67A86D062091D91C00223512 /* Current.swift in Sources */,
 				67A86D002091CCAB00223512 /* NetworkManager.swift in Sources */,
 				67A86CDE2091CB1300223512 /* ViewController.swift in Sources */,
+				67A86D1C209205E200223512 /* HomeUseCase.swift in Sources */,
+				67A86D1E2092086000223512 /* UseCaseRequirements.swift in Sources */,
 				67A86CDC2091CB1300223512 /* AppDelegate.swift in Sources */,
 				67A86D022091D2DC00223512 /* URLs.swift in Sources */,
 				67A86D082091DDC900223512 /* JsonParser.swift in Sources */,
@@ -318,6 +340,8 @@
 				67A86D162091FC3400223512 /* ForecastRepository.swift in Sources */,
 				67A86D142091FA7400223512 /* Main.xcdatamodeld in Sources */,
 				67A86D042091D69400223512 /* Forecast.swift in Sources */,
+				67A86D22209208EC00223512 /* DetailsUseCase.swift in Sources */,
+				67A86D202092089200223512 /* MapUseCase.swift in Sources */,
 				67A86D0D2091F96F00223512 /* DatabaseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

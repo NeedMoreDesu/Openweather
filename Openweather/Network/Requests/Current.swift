@@ -30,7 +30,7 @@ extension JsonParser {
     }
 }
 
-extension NetworkManager {
+extension NetworkManager: CurrentRouter {
     class func current(params: [URLs.Params], completion: @escaping ((_ current: Forecast?, _ error: Error?) -> Void)) {
         let urlString = URLs.formRequestString(baseRequest: URLs.current, params: params)
         NetworkManager.jsonRequest(urlString: urlString, method: .GET) { (json, error) in

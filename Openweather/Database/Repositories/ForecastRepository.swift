@@ -30,7 +30,7 @@ extension DBForecast {
     }
 }
 
-extension DatabaseManager {
+extension DatabaseManager: ForecastRepository {
     private func new(_ forecast: Forecast) -> DBForecast {
         let dbobj = DBForecast.init(entity: DBForecast.entity(), insertInto: self.managedObjectContext)
         return dbobj
