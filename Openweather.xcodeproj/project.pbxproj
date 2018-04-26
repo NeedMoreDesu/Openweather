@@ -15,6 +15,9 @@
 		67A86CF12091CB1500223512 /* OpenweatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86CF02091CB1500223512 /* OpenweatherTests.swift */; };
 		67A86D002091CCAB00223512 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86CFF2091CCAB00223512 /* NetworkManager.swift */; };
 		67A86D022091D2DC00223512 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D012091D2DC00223512 /* URLs.swift */; };
+		67A86D042091D69400223512 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D032091D69400223512 /* Forecast.swift */; };
+		67A86D062091D91C00223512 /* ParseForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D052091D91C00223512 /* ParseForecast.swift */; };
+		67A86D082091DDC900223512 /* JsonParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D072091DDC900223512 /* JsonParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		67A86CF22091CB1500223512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67A86CFF2091CCAB00223512 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		67A86D012091D2DC00223512 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
+		67A86D032091D69400223512 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		67A86D052091D91C00223512 /* ParseForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseForecast.swift; sourceTree = "<group>"; };
+		67A86D072091DDC900223512 /* JsonParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		67A86CFD2091CBF300223512 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				67A86D032091D69400223512 /* Forecast.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -128,8 +135,10 @@
 		67A86CFE2091CC5F00223512 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				67A86D072091DDC900223512 /* JsonParser.swift */,
 				67A86CFF2091CCAB00223512 /* NetworkManager.swift */,
 				67A86D012091D2DC00223512 /* URLs.swift */,
+				67A86D052091D91C00223512 /* ParseForecast.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -235,10 +244,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67A86D062091D91C00223512 /* ParseForecast.swift in Sources */,
 				67A86D002091CCAB00223512 /* NetworkManager.swift in Sources */,
 				67A86CDE2091CB1300223512 /* ViewController.swift in Sources */,
 				67A86CDC2091CB1300223512 /* AppDelegate.swift in Sources */,
 				67A86D022091D2DC00223512 /* URLs.swift in Sources */,
+				67A86D082091DDC900223512 /* JsonParser.swift in Sources */,
+				67A86D042091D69400223512 /* Forecast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

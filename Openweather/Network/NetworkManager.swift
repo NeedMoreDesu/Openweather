@@ -15,7 +15,7 @@ class NetworkManager: NSObject {
         case POST
     }
     
-    class func jsonRequest(urlString: String, method: HTTPMethod, completion: @escaping ((_ json: [String: Any]?, _ error: Error?) -> Void)) {
+    class func jsonRequest(urlString: String, method: HTTPMethod, completion: @escaping ((_ json: JsonParser?, _ error: Error?) -> Void)) {
         let session = URLSession.shared
         let url = URL(string: urlString)!
         let request = NSMutableURLRequest(url: url)
@@ -30,7 +30,7 @@ class NetworkManager: NSObject {
                 return
             }
             let json = try? JSONSerialization.jsonObject(with: data, options: [])
-            completion(json as? [String: Any], error)
+            completion(JsonParser(json: json), error)
         })
         dataTask.resume()
     }
