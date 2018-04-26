@@ -9,6 +9,7 @@
 import UIKit
 
 protocol HomeScreenPresenter {
+    var title: String { get }
     var cellModels: [HomeScreenCellType] { get }
     func handleNewButtonClick()
 }
@@ -17,6 +18,9 @@ class HomeScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     //MARK:- public
     public func updateUI() {
         self.tableView.reloadData()
+    }
+    public class func create() -> HomeScreenVC {
+        return Utils.createVC(storyboardId: "Home", vcId: "HomeScreenVC")
     }
     
     //MARK:- outlets
@@ -30,6 +34,7 @@ class HomeScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         super.viewDidLoad()
         
         self.presenter = HomeScreenPresenterImplementation()
+        self.title = self.presenter.title
     }
     
     //MARK:- table view data source

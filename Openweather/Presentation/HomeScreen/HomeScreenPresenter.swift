@@ -19,6 +19,7 @@ protocol HomeUseCase {
 }
 
 class HomeScreenPresenterImplementation: NSObject, HomeScreenPresenter {
+    var title: String = "Home"
     var cellModels: [HomeScreenCellType]
     var homeUseCase: HomeUseCase
     
