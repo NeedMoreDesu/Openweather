@@ -13,6 +13,7 @@ extension DBForecast {
     func fromPONSO(_ ponso: Forecast) {
         self.id = Int32(ponso.id)
         self.date = ponso.date
+        self.name = ponso.name
         self.temperature = ponso.temperature
         self.humidity = ponso.humidity
         self.windSpeed = ponso.windSpeed
@@ -22,7 +23,7 @@ extension DBForecast {
         self.lon = ponso.lon
     }
     func toPONSO() -> Forecast {
-        return Forecast(id: Int(self.id), date: self.date!,
+        return Forecast(id: Int(self.id), date: self.date!, name: self.name!,
                         temperature: self.temperature, humidity: self.humidity,
                         windSpeed: self.windSpeed, windDegree: self.windDegree,
                         weatherId: Int(self.weatherId), weatherDescription: self.weatherDescription!,

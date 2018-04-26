@@ -8,8 +8,12 @@
 
 import UIKit
 
-class HomeInteractor: NSObject {
-    var timestampRouter: ForecastRepository!
+class HomeInteractor: NSObject, HomeUseCase {
+    var timestampRouter: ForecastRepository
+    
+    init(timestampRouter: ForecastRepository = DatabaseManager.shared) {
+        self.timestampRouter = timestampRouter
+    }
     
     func save(forecast: Forecast) {
         self.timestampRouter.save(forecast)

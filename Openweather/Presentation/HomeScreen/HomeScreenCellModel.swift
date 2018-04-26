@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum HomeScreenCellType {
+    case main(model: HomeScreenCellModel)
+    case new
+}
+
 struct HomeScreenCellModel {
     static let colorCycle = [UIColor(red: 1.0, green: 0.9, blue: 0.9, alpha: 1.0),
                              UIColor(red: 0.9, green: 1.0, blue: 0.9, alpha: 1.0),
