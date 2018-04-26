@@ -20,10 +20,14 @@ class Forecast: NSObject {
     let weatherId: Int
     let weatherDescription: String
     
+    let lat: Double
+    let lon: Double
+    
     init(date: Date,
          temperature: Double, humidity: Double,
          windSpeed: Double, windDegree: Double,
-         weatherId: Int, weatherDescription: String) {
+         weatherId: Int, weatherDescription: String,
+         lat: Double, lon: Double) {
         self.date = date
         self.temperature = temperature
         self.humidity = humidity
@@ -31,5 +35,7 @@ class Forecast: NSObject {
         self.windDegree = windDegree
         self.weatherId = weatherId
         self.weatherDescription = weatherDescription
+        self.lat = lat
+        self.lon = lon
     }
 }

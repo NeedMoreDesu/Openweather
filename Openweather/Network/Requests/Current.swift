@@ -16,11 +16,14 @@ extension JsonParser {
             let windSpeed = self["wind"]["speed"].getDouble(),
             let windDegree = self["wind"]["deg"].getDouble(),
             let weatherId = self["weather"][0]["id"].getInt(),
-            let weatherDescription = self["weather"][0]["description"].getString() {
+            let weatherDescription = self["weather"][0]["description"].getString(),
+            let lat = self["coord"]["lat"].getDouble(),
+            let lon = self["coord"]["lon"].getDouble() {
             let date = Date(timeIntervalSince1970: TimeInterval(dateUTC))
             return Forecast(date: date, temperature: temperature, humidity: humidity,
                      windSpeed: windSpeed, windDegree: windDegree,
-                     weatherId: weatherId, weatherDescription: weatherDescription)
+                     weatherId: weatherId, weatherDescription: weatherDescription,
+                     lat: lat, lon: lon)
         }
         return nil
     }
