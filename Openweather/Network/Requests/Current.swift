@@ -10,7 +10,8 @@ import UIKit
 
 extension JsonParser {
     func parseCurrent() -> Forecast? {
-        if let dateUTC = self["dt"].getInt(),
+        if let id = self["id"].getInt(),
+            let dateUTC = self["dt"].getInt(),
             let temperature = self["main"]["temp"].getDouble(),
             let humidity = self["main"]["humidity"].getDouble(),
             let windSpeed = self["wind"]["speed"].getDouble(),
@@ -20,7 +21,7 @@ extension JsonParser {
             let lat = self["coord"]["lat"].getDouble(),
             let lon = self["coord"]["lon"].getDouble() {
             let date = Date(timeIntervalSince1970: TimeInterval(dateUTC))
-            return Forecast(date: date, temperature: temperature, humidity: humidity,
+            return Forecast(id: id, date: date, temperature: temperature, humidity: humidity,
                      windSpeed: windSpeed, windDegree: windDegree,
                      weatherId: weatherId, weatherDescription: weatherDescription,
                      lat: lat, lon: lon)

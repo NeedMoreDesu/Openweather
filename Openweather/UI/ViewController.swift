@@ -14,11 +14,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         NetworkManager.current(params: [.city(name: "Kyiv")]) { (forecast, error) in
-            
+            DatabaseManager.shared.save(forecast!)
+            let forecasts = DatabaseManager.shared.allForecast()
         }
-        NetworkManager.forecast5(params: [.city(name: "Kyiv")]) { (forecasts, error) in
-            
-        }
+//        NetworkManager.forecast5(params: [.city(name: "Kyiv")]) { (forecasts, error) in
+//
+//        }
     }
 
     override func didReceiveMemoryWarning() {

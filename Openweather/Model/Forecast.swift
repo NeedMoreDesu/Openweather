@@ -9,6 +9,7 @@
 import UIKit
 
 class Forecast: NSObject {
+    let id: Int
     let date: Date
     
     let temperature: Double
@@ -23,11 +24,12 @@ class Forecast: NSObject {
     let lat: Double
     let lon: Double
     
-    init(date: Date,
+    init(id: Int, date: Date,
          temperature: Double, humidity: Double,
          windSpeed: Double, windDegree: Double,
          weatherId: Int, weatherDescription: String,
          lat: Double, lon: Double) {
+        self.id = id
         self.date = date
         self.temperature = temperature
         self.humidity = humidity
