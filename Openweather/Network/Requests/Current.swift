@@ -12,6 +12,7 @@ extension JsonParser {
     func parseCurrent() -> Forecast? {
         if let id = self["id"].getInt(),
             let dateUTC = self["dt"].getInt(),
+            let name = self["name"].getString(),
             let temperature = self["main"]["temp"].getDouble(),
             let humidity = self["main"]["humidity"].getDouble(),
             let windSpeed = self["wind"]["speed"].getDouble(),
@@ -21,10 +22,11 @@ extension JsonParser {
             let lat = self["coord"]["lat"].getDouble(),
             let lon = self["coord"]["lon"].getDouble() {
             let date = Date(timeIntervalSince1970: TimeInterval(dateUTC))
-            return Forecast(id: id, date: date, temperature: temperature, humidity: humidity,
-                     windSpeed: windSpeed, windDegree: windDegree,
-                     weatherId: weatherId, weatherDescription: weatherDescription,
-                     lat: lat, lon: lon)
+            return Forecast(id: id, date: date, name: name,
+                            temperature: temperature, humidity: humidity,
+                            windSpeed: windSpeed, windDegree: windDegree,
+                            weatherId: weatherId, weatherDescription: weatherDescription,
+                            lat: lat, lon: lon)
         }
         return nil
     }

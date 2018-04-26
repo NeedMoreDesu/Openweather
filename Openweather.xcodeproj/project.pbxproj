@@ -27,6 +27,8 @@
 		67A86D1E2092086000223512 /* UseCaseRequirements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D1D2092086000223512 /* UseCaseRequirements.swift */; };
 		67A86D202092089200223512 /* MapUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D1F2092089200223512 /* MapUseCase.swift */; };
 		67A86D22209208EC00223512 /* DetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D21209208EC00223512 /* DetailsUseCase.swift */; };
+		67A86D252092130100223512 /* HomeScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D242092130100223512 /* HomeScreenCell.swift */; };
+		67A86D28209213E800223512 /* HomeScreenCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D27209213E800223512 /* HomeScreenCellModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		67A86D1D2092086000223512 /* UseCaseRequirements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseRequirements.swift; sourceTree = "<group>"; };
 		67A86D1F2092089200223512 /* MapUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapUseCase.swift; sourceTree = "<group>"; };
 		67A86D21209208EC00223512 /* DetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsUseCase.swift; sourceTree = "<group>"; };
+		67A86D242092130100223512 /* HomeScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCell.swift; sourceTree = "<group>"; };
+		67A86D27209213E800223512 /* HomeScreenCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCellModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,8 +137,7 @@
 		67A86CFB2091CBD300223512 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				67A86CDF2091CB1300223512 /* Main.storyboard */,
-				67A86CDD2091CB1300223512 /* ViewController.swift */,
+				67A86D23209212D400223512 /* HomeScreen */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 		67A86CFC2091CBDE00223512 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				67A86D26209213DA00223512 /* HomeScreen */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -225,6 +229,24 @@
 				67A86D21209208EC00223512 /* DetailsUseCase.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		67A86D23209212D400223512 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				67A86CDF2091CB1300223512 /* Main.storyboard */,
+				67A86CDD2091CB1300223512 /* ViewController.swift */,
+				67A86D242092130100223512 /* HomeScreenCell.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		67A86D26209213DA00223512 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				67A86D27209213E800223512 /* HomeScreenCellModel.swift */,
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,10 +354,12 @@
 				67A86D002091CCAB00223512 /* NetworkManager.swift in Sources */,
 				67A86CDE2091CB1300223512 /* ViewController.swift in Sources */,
 				67A86D1C209205E200223512 /* HomeUseCase.swift in Sources */,
+				67A86D28209213E800223512 /* HomeScreenCellModel.swift in Sources */,
 				67A86D1E2092086000223512 /* UseCaseRequirements.swift in Sources */,
 				67A86CDC2091CB1300223512 /* AppDelegate.swift in Sources */,
 				67A86D022091D2DC00223512 /* URLs.swift in Sources */,
 				67A86D082091DDC900223512 /* JsonParser.swift in Sources */,
+				67A86D252092130100223512 /* HomeScreenCell.swift in Sources */,
 				67A86D0A2091E98700223512 /* Forecast5.swift in Sources */,
 				67A86D162091FC3400223512 /* ForecastRepository.swift in Sources */,
 				67A86D142091FA7400223512 /* Main.xcdatamodeld in Sources */,
