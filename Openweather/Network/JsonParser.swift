@@ -11,7 +11,7 @@ import UIKit
 struct JsonParser {
     let json: Any?
     
-    // path method
+    // path methods
     subscript(path: String) -> JsonParser {
         let dict = json as? [String: Any]
         let value = dict?[path]
@@ -21,6 +21,15 @@ struct JsonParser {
         let arr = json as? [Any]
         let value = arr?[nth]
         return JsonParser(json: value)
+    }
+    func array() -> [JsonParser]? {
+        if let arr = json as? [Any] {
+            let parsers = arr.map({ (any) -> JsonParser in
+                return JsonParser(json: any)
+            })
+            return parsers
+        }
+        return nil
     }
     // get different types
     func getString() -> String? {

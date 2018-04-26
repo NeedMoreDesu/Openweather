@@ -12,9 +12,12 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NetworkManager.jsonRequest(urlString: URLs.current(city: "Kyiv"), method: .GET) { (json, error) in
-            let forecast = Forecast.fromJson(json!)
+
+        NetworkManager.current(params: [.city(name: "Kyiv")]) { (forecast, error) in
+            
+        }
+        NetworkManager.forecast5(params: [.city(name: "Kyiv")]) { (forecasts, error) in
+            
         }
     }
 
