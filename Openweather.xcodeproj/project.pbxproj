@@ -13,6 +13,8 @@
 		67A86CE32091CB1400223512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67A86CE22091CB1400223512 /* Assets.xcassets */; };
 		67A86CE62091CB1400223512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67A86CE42091CB1400223512 /* LaunchScreen.storyboard */; };
 		67A86CF12091CB1500223512 /* OpenweatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86CF02091CB1500223512 /* OpenweatherTests.swift */; };
+		67A86D002091CCAB00223512 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86CFF2091CCAB00223512 /* NetworkManager.swift */; };
+		67A86D022091D2DC00223512 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D012091D2DC00223512 /* URLs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		67A86CEC2091CB1500223512 /* OpenweatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenweatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A86CF02091CB1500223512 /* OpenweatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenweatherTests.swift; sourceTree = "<group>"; };
 		67A86CF22091CB1500223512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67A86CFF2091CCAB00223512 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		67A86D012091D2DC00223512 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +81,11 @@
 		67A86CDA2091CB1300223512 /* Openweather */ = {
 			isa = PBXGroup;
 			children = (
+				67A86CFB2091CBD300223512 /* UI */,
+				67A86CFC2091CBDE00223512 /* Presentation */,
+				67A86CFE2091CC5F00223512 /* Network */,
+				67A86CFD2091CBF300223512 /* Model */,
 				67A86CDB2091CB1300223512 /* AppDelegate.swift */,
-				67A86CDD2091CB1300223512 /* ViewController.swift */,
-				67A86CDF2091CB1300223512 /* Main.storyboard */,
 				67A86CE22091CB1400223512 /* Assets.xcassets */,
 				67A86CE42091CB1400223512 /* LaunchScreen.storyboard */,
 				67A86CE72091CB1400223512 /* Info.plist */,
@@ -94,6 +100,38 @@
 				67A86CF22091CB1500223512 /* Info.plist */,
 			);
 			path = OpenweatherTests;
+			sourceTree = "<group>";
+		};
+		67A86CFB2091CBD300223512 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				67A86CDF2091CB1300223512 /* Main.storyboard */,
+				67A86CDD2091CB1300223512 /* ViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		67A86CFC2091CBDE00223512 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		67A86CFD2091CBF300223512 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		67A86CFE2091CC5F00223512 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				67A86CFF2091CCAB00223512 /* NetworkManager.swift */,
+				67A86D012091D2DC00223512 /* URLs.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67A86D002091CCAB00223512 /* NetworkManager.swift in Sources */,
 				67A86CDE2091CB1300223512 /* ViewController.swift in Sources */,
 				67A86CDC2091CB1300223512 /* AppDelegate.swift in Sources */,
+				67A86D022091D2DC00223512 /* URLs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
