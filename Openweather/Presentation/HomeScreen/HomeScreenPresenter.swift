@@ -18,14 +18,21 @@ protocol HomeUseCase {
     func allForecast() -> [Forecast]
 }
 
+protocol HomeScreenRouter {
+    func toMap()
+}
+
 class HomeScreenPresenterImplementation: NSObject, HomeScreenPresenter {
+    var homeUseCase: HomeUseCase
+    var homeScreenRouter: HomeScreenRouter
+
     var title: String = "Home"
     var cellModels: [HomeScreenCellType]
-    var homeUseCase: HomeUseCase
     
-    init(homeUseCase: HomeUseCase = HomeInteractor()) {
+    init(homeUseCase: HomeUseCase = HomeInteractor(), homeScreenRouter: HomeScreenRouter) {
         self.homeUseCase = homeUseCase
-        
+        self.homeScreenRouter = homeScreenRouter
+
         let forecasts = self.homeUseCase.allForecast()
         let forecastModels = HomeScreenCellModel.fromForecasts(forecasts).map { HomeScreenCellType.main(model: $0) }
         let newCellModel = HomeScreenCellType.new
@@ -34,6 +41,6 @@ class HomeScreenPresenterImplementation: NSObject, HomeScreenPresenter {
     }
     
     func handleNewButtonClick() {
-        
+        self.homeScreenRouter.toMap()
     }
 }

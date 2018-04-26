@@ -8,9 +8,13 @@
 
 import UIKit
 
-class MapInteractor: NSObject {
-    var timestampRouter: ForecastRepository!
+class MapInteractor: NSObject, MapUseCase {
+    var timestampRouter: ForecastRepository
     
+    init(timestampRouter: ForecastRepository = DatabaseManager.shared) {
+        self.timestampRouter = timestampRouter
+    }
+
     func save(forecast: Forecast) {
         self.timestampRouter.save(forecast)
     }

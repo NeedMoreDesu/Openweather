@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.makeKeyAndVisible()
         
-        ApplicationStartWireframe.showFirstScreen()
+        TabBarWireframe().setup()
         
         return true
     }

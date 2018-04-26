@@ -10,7 +10,10 @@
 		6781A4B520922296000F0C80 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6781A4B420922296000F0C80 /* Tabbar.storyboard */; };
 		6781A4B720922360000F0C80 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A4B620922360000F0C80 /* TabBar.swift */; };
 		6781A4B920922385000F0C80 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A4B820922385000F0C80 /* Utils.swift */; };
-		6781A4BB209223EC000F0C80 /* ApplicationStartWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A4BA209223EC000F0C80 /* ApplicationStartWireframe.swift */; };
+		6781A4BB209223EC000F0C80 /* TabBarWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A4BA209223EC000F0C80 /* TabBarWireframe.swift */; };
+		6781A4BE20922ABB000F0C80 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6781A4BD20922ABA000F0C80 /* Map.storyboard */; };
+		6781A4C020922ACA000F0C80 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A4BF20922ACA000F0C80 /* MapVC.swift */; };
+		6781A4C320922BF8000F0C80 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A4C220922BF8000F0C80 /* MapPresenter.swift */; };
 		67A86CDC2091CB1300223512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86CDB2091CB1300223512 /* AppDelegate.swift */; };
 		67A86CDE2091CB1300223512 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86CDD2091CB1300223512 /* HomeScreenVC.swift */; };
 		67A86CE12091CB1300223512 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67A86CDF2091CB1300223512 /* Home.storyboard */; };
@@ -50,7 +53,10 @@
 		6781A4B420922296000F0C80 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		6781A4B620922360000F0C80 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		6781A4B820922385000F0C80 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		6781A4BA209223EC000F0C80 /* ApplicationStartWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationStartWireframe.swift; sourceTree = "<group>"; };
+		6781A4BA209223EC000F0C80 /* TabBarWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarWireframe.swift; sourceTree = "<group>"; };
+		6781A4BD20922ABA000F0C80 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		6781A4BF20922ACA000F0C80 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		6781A4C220922BF8000F0C80 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		67A86CD82091CB1300223512 /* Openweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A86CDB2091CB1300223512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67A86CDD2091CB1300223512 /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
@@ -122,9 +128,26 @@
 			children = (
 				6781A4B420922296000F0C80 /* Tabbar.storyboard */,
 				6781A4B620922360000F0C80 /* TabBar.swift */,
-				6781A4BA209223EC000F0C80 /* ApplicationStartWireframe.swift */,
+				6781A4BA209223EC000F0C80 /* TabBarWireframe.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		6781A4BC20922A9C000F0C80 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				6781A4BD20922ABA000F0C80 /* Map.storyboard */,
+				6781A4BF20922ACA000F0C80 /* MapVC.swift */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		6781A4C120922BE2000F0C80 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				6781A4C220922BF8000F0C80 /* MapPresenter.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		67A86CCF2091CB1200223512 = {
@@ -176,6 +199,7 @@
 			children = (
 				6781A4B320922282000F0C80 /* TabBar */,
 				67A86D23209212D400223512 /* HomeScreen */,
+				6781A4BC20922A9C000F0C80 /* Map */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -184,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				67A86D26209213DA00223512 /* HomeScreen */,
+				6781A4C120922BE2000F0C80 /* Map */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -371,6 +396,7 @@
 			files = (
 				6781A4B520922296000F0C80 /* Tabbar.storyboard in Resources */,
 				67A86CE62091CB1400223512 /* LaunchScreen.storyboard in Resources */,
+				6781A4BE20922ABB000F0C80 /* Map.storyboard in Resources */,
 				67A86CE32091CB1400223512 /* Assets.xcassets in Resources */,
 				67A86CE12091CB1300223512 /* Home.storyboard in Resources */,
 			);
@@ -391,13 +417,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				67A86D062091D91C00223512 /* Current.swift in Sources */,
+				6781A4C320922BF8000F0C80 /* MapPresenter.swift in Sources */,
 				67A86D002091CCAB00223512 /* NetworkManager.swift in Sources */,
 				6781A4B720922360000F0C80 /* TabBar.swift in Sources */,
 				67A86CDE2091CB1300223512 /* HomeScreenVC.swift in Sources */,
 				67A86D1C209205E200223512 /* HomeUseCase.swift in Sources */,
+				6781A4C020922ACA000F0C80 /* MapVC.swift in Sources */,
 				67A86D28209213E800223512 /* HomeScreenCellModel.swift in Sources */,
 				67A86D1E2092086000223512 /* UseCaseRequirements.swift in Sources */,
-				6781A4BB209223EC000F0C80 /* ApplicationStartWireframe.swift in Sources */,
+				6781A4BB209223EC000F0C80 /* TabBarWireframe.swift in Sources */,
 				67A86CDC2091CB1300223512 /* AppDelegate.swift in Sources */,
 				67A86D2A209216D900223512 /* HomeScreenPresenter.swift in Sources */,
 				67A86D022091D2DC00223512 /* URLs.swift in Sources */,
