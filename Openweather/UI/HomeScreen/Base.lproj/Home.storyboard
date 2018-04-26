@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0we-ZK-Edf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0we-ZK-Edf">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -32,7 +32,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CITY NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dZA-Ne-2ix">
                                                     <rect key="frame" x="30" y="0.0" width="230" height="69.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="69.5" id="exb-2Z-sBs"/>
+                                                        <constraint firstAttribute="height" constant="70" id="exb-2Z-sBs"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -68,7 +68,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="eek-VM-ecR" secondAttribute="trailing" constant="12" id="6BO-9X-6Qn"/>
-                                                <constraint firstAttribute="bottom" secondItem="dZA-Ne-2ix" secondAttribute="bottom" id="CMc-Bo-El8"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dZA-Ne-2ix" secondAttribute="bottom" id="CMc-Bo-El8"/>
                                                 <constraint firstItem="dZA-Ne-2ix" firstAttribute="top" secondItem="rh1-U4-zL0" secondAttribute="top" id="QYp-hk-Tbp"/>
                                                 <constraint firstAttribute="bottom" secondItem="ZiM-uq-3Cl" secondAttribute="bottom" id="dj2-My-5uY"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZiM-uq-3Cl" secondAttribute="trailing" constant="15" id="hJZ-GI-mrX"/>
@@ -111,7 +111,7 @@ Location</string>
                                             <constraints>
                                                 <constraint firstItem="hVG-z4-0pD" firstAttribute="top" secondItem="FOu-ot-Z6l" secondAttribute="top" id="0Ys-cA-ZJ1"/>
                                                 <constraint firstAttribute="trailing" secondItem="hVG-z4-0pD" secondAttribute="trailing" id="R9P-41-y1W"/>
-                                                <constraint firstAttribute="bottom" secondItem="hVG-z4-0pD" secondAttribute="bottom" id="mQa-iE-n3T"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hVG-z4-0pD" secondAttribute="bottom" id="mQa-iE-n3T"/>
                                                 <constraint firstItem="hVG-z4-0pD" firstAttribute="leading" secondItem="FOu-ot-Z6l" secondAttribute="leading" id="rYs-bM-aIU"/>
                                             </constraints>
                                         </tableViewCellContentView>

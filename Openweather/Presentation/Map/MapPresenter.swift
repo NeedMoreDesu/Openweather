@@ -9,8 +9,8 @@
 import UIKit
 
 protocol MapUseCase {
-    func save(forecast: Forecast)
     func allForecast() -> [Forecast]
+    func newLocation(lat: Double, lon: Double, callback: @escaping (() -> Void))
 }
 
 protocol MapRouter {
@@ -20,21 +20,20 @@ protocol MapRouter {
 class MapPresenterImplementation: NSObject, MapPresenter {
     var mapUseCase: MapUseCase
     var mapRouter: MapRouter
+    var forecasts: [Forecast] {
+        return self.mapUseCase.allForecast()
+    }
 
-    var title: String = "Home"
+    var title: String = "Map"
     
     init(mapUseCase: MapUseCase = MapInteractor(), mapRouter: MapRouter) {
         self.mapUseCase = mapUseCase
         self.mapRouter = mapRouter
-        
-//        let forecasts = self.mapUseCase.allForecast()
-//        let forecastModels = HomeScreenCellModel.fromForecasts(forecasts).map { HomeScreenCellType.main(model: $0) }
-//        let newCellModel = HomeScreenCellType.new
-//        let cellModels = forecastModels + [newCellModel]
-//        self.cellModels = cellModels
     }
     
     func handleMapClick(lat: Double, lon: Double) {
-        self.mapRouter.toHome()
+        self.mapUseCase.newLocation(lat: lat, lon: lon) {
+            self.mapRouter.toHome()
+        }
     }
 }

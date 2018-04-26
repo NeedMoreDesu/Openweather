@@ -11,6 +11,7 @@ import MapKit
 
 protocol MapPresenter {
     var title: String { get }
+    var forecasts: [Forecast] { get }
     func handleMapClick(lat: Double, lon: Double)
 }
 
@@ -38,8 +39,19 @@ class MapVC: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.presenter = HomeScreenPresenterImplementation()
-//        self.title = self.presenter.title
+        self.title = self.presenter.title
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        mapView.removeAnnotations(mapView.annotations)
+        for item in self.presenter.forecasts {
+            let location = CLLocationCoordinate2D(latitude: item.lat, longitude: item.lon)
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = location
+            mapView.addAnnotation(annotation)
+        }
     }
     
     //MARK:- actions

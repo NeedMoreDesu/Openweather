@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol HomeScreenView {
-    func updateUI()
-}
-
 protocol HomeUseCase {
     func save(forecast: Forecast)
     func delete(forecast: Forecast)
@@ -32,7 +28,12 @@ class HomeScreenPresenterImplementation: NSObject, HomeScreenPresenter {
     init(homeUseCase: HomeUseCase = HomeInteractor(), homeScreenRouter: HomeScreenRouter) {
         self.homeUseCase = homeUseCase
         self.homeScreenRouter = homeScreenRouter
-
+        self.cellModels = []
+        super.init()
+        self.updateCellModels()
+    }
+    
+    func updateCellModels() {
         let forecasts = self.homeUseCase.allForecast()
         let forecastModels = HomeScreenCellModel.fromForecasts(forecasts).map { HomeScreenCellType.main(model: $0) }
         let newCellModel = HomeScreenCellType.new

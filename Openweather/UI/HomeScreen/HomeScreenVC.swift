@@ -12,9 +12,10 @@ protocol HomeScreenPresenter {
     var title: String { get }
     var cellModels: [HomeScreenCellType] { get }
     func handleNewButtonClick()
+    func updateCellModels()
 }
 
-class HomeScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource, HomeScreenView {
+class HomeScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     //MARK:- public
     public func updateUI() {
         self.tableView.reloadData()
@@ -39,6 +40,13 @@ class HomeScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         super.viewDidLoad()
         
         self.title = self.presenter.title
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.presenter.updateCellModels()
+        self.updateUI()
     }
     
     //MARK:- table view data source

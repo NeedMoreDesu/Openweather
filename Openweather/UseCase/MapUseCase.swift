@@ -10,13 +10,21 @@ import UIKit
 
 class MapInteractor: NSObject, MapUseCase {
     var timestampRouter: ForecastRepository
+    var currentRouter: CurrentRouter.Type
     
-    init(timestampRouter: ForecastRepository = DatabaseManager.shared) {
+    init(timestampRouter: ForecastRepository = DatabaseManager.shared,
+         currentRouter: CurrentRouter.Type = NetworkManager.self) {
         self.timestampRouter = timestampRouter
+        self.currentRouter = currentRouter
     }
 
-    func save(forecast: Forecast) {
-        self.timestampRouter.save(forecast)
+    func newLocation(lat: Double, lon: Double, callback: @escaping (() -> Void)) {
+        self.currentRouter.current(params: [.location(lat: lat, lon: lon)]) { (forecast, error) in
+            if let forecast = forecast {
+                self.timestampRouter.save(forecast)
+            }
+            callback()
+        }
     }
 
     func allForecast() -> [Forecast] {

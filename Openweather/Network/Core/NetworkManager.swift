@@ -21,16 +21,18 @@ class NetworkManager: NSObject {
         let request = NSMutableURLRequest(url: url)
         request.httpMethod = method.rawValue
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) in
-            if let error = error {
-                completion(nil, error)
-                return
+            DispatchQueue.main.async {
+                if let error = error {
+                    completion(nil, error)
+                    return
+                }
+                guard let data = data else {
+                    completion(nil, error)
+                    return
+                }
+                let json = try? JSONSerialization.jsonObject(with: data, options: [])
+                completion(JsonParser(json: json), error)
             }
-            guard let data = data else {
-                completion(nil, error)
-                return
-            }
-            let json = try? JSONSerialization.jsonObject(with: data, options: [])
-            completion(JsonParser(json: json), error)
         })
         dataTask.resume()
     }
