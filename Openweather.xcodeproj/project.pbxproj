@@ -60,6 +60,10 @@
 		67AB39AC20932DFF0006C453 /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB39AB20932DFF0006C453 /* DateFormatterManager.swift */; };
 		67AB39AE20933C620006C453 /* DetailsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB39AD20933C620006C453 /* DetailsHeaderCell.swift */; };
 		67AB39B020934C480006C453 /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB39AF20934C480006C453 /* JsonParserTests.swift */; };
+		67AB39B2209350B60006C453 /* ParsingCurrentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB39B1209350B60006C453 /* ParsingCurrentTests.swift */; };
+		67AB39B4209351460006C453 /* current1.json in Resources */ = {isa = PBXBuildFile; fileRef = 67AB39B3209351460006C453 /* current1.json */; };
+		67AB39B62093516C0006C453 /* current2.json in Resources */ = {isa = PBXBuildFile; fileRef = 67AB39B52093516C0006C453 /* current2.json */; };
+		67AB39B8209353750006C453 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB39B7209353750006C453 /* TestUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +134,10 @@
 		67AB39AB20932DFF0006C453 /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
 		67AB39AD20933C620006C453 /* DetailsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeaderCell.swift; sourceTree = "<group>"; };
 		67AB39AF20934C480006C453 /* JsonParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
+		67AB39B1209350B60006C453 /* ParsingCurrentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsingCurrentTests.swift; sourceTree = "<group>"; };
+		67AB39B3209351460006C453 /* current1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = current1.json; sourceTree = "<group>"; };
+		67AB39B52093516C0006C453 /* current2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = current2.json; sourceTree = "<group>"; };
+		67AB39B7209353750006C453 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,7 +303,11 @@
 		67A86CEF2091CB1500223512 /* OpenweatherTests */ = {
 			isa = PBXGroup;
 			children = (
+				67AB39B7209353750006C453 /* TestUtils.swift */,
 				67AB39AF20934C480006C453 /* JsonParserTests.swift */,
+				67AB39B1209350B60006C453 /* ParsingCurrentTests.swift */,
+				67AB39B3209351460006C453 /* current1.json */,
+				67AB39B52093516C0006C453 /* current2.json */,
 				67A86CF22091CB1500223512 /* Info.plist */,
 			);
 			path = OpenweatherTests;
@@ -531,6 +543,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67AB39B62093516C0006C453 /* current2.json in Resources */,
+				67AB39B4209351460006C453 /* current1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,6 +593,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67AB39B2209350B60006C453 /* ParsingCurrentTests.swift in Sources */,
+				67AB39B8209353750006C453 /* TestUtils.swift in Sources */,
 				67AB39B020934C480006C453 /* JsonParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
