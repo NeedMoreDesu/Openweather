@@ -57,4 +57,11 @@ class HomeScreenPresenterImplementation: NSObject, HomeScreenPresenter {
         let forecast = self.forecasts[index]
         self.toDetailsRouter.showDetails(forecast: forecast)
     }
+    
+    func deleteItemAt(index: Int) {
+        let forecast = self.forecasts[index]
+        self.forecasts.remove(at: index)
+        self.cellModels.remove(at: index)
+        self.homeUseCase.delete(forecast: forecast)
+    }
 }

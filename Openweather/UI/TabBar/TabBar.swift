@@ -12,4 +12,8 @@ class TabBar: UITabBarController {
     class func create() -> TabBar {
         return Utils.createVC(storyboardId: "Tabbar", vcId: "TabBar")
     }
+    
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        (self.selectedViewController as? UINavigationController)?.popToRootViewController(animated: false)  
+    }
 }

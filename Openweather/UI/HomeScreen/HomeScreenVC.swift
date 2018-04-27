@@ -15,6 +15,7 @@ protocol HomeScreenPresenter {
 
     func handleNewButtonClick()
     func forecastClickedAt(index: Int)
+    func deleteItemAt(index: Int)
 }
 
 class HomeScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -75,6 +76,23 @@ class HomeScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
             self.presenter.handleNewButtonClick()
         case .main(_):
             self.presenter.forecastClickedAt(index: indexPath.row)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let item = self.presenter.cellModels[indexPath.row]
+        switch item {
+        case .new:
+            return []
+        case .main(_):
+            let delete = UITableViewRowAction(style: .destructive, title: "Delete") { (action, indexPath) in
+                tableView.beginUpdates()
+                self.presenter.deleteItemAt(index: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+                tableView.endUpdates()
+            }
+            
+            return [delete]
         }
     }
 }
