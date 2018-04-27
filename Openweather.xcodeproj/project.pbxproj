@@ -66,6 +66,7 @@
 		67AB39B8209353750006C453 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB39B7209353750006C453 /* TestUtils.swift */; };
 		67F50EB520935E14007942EF /* MapInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F50EB420935E14007942EF /* MapInteractorTests.swift */; };
 		67F50EB720936009007942EF /* HomeScreenPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F50EB620936009007942EF /* HomeScreenPresenterTests.swift */; };
+		67F50EBB2093686C007942EF /* DetailsCellModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F50EBA2093686C007942EF /* DetailsCellModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,7 @@
 		67AB39B7209353750006C453 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		67F50EB420935E14007942EF /* MapInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorTests.swift; sourceTree = "<group>"; };
 		67F50EB620936009007942EF /* HomeScreenPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenterTests.swift; sourceTree = "<group>"; };
+		67F50EBA2093686C007942EF /* DetailsCellModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCellModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +314,7 @@
 				67AB39B1209350B60006C453 /* ParsingCurrentTests.swift */,
 				67F50EB420935E14007942EF /* MapInteractorTests.swift */,
 				67F50EB620936009007942EF /* HomeScreenPresenterTests.swift */,
+				67F50EBA2093686C007942EF /* DetailsCellModelTests.swift */,
 				67AB39B3209351460006C453 /* current1.json */,
 				67AB39B52093516C0006C453 /* current2.json */,
 				67A86CF22091CB1500223512 /* Info.plist */,
@@ -599,6 +602,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67F50EBB2093686C007942EF /* DetailsCellModelTests.swift in Sources */,
 				67F50EB720936009007942EF /* HomeScreenPresenterTests.swift in Sources */,
 				67AB39B2209350B60006C453 /* ParsingCurrentTests.swift in Sources */,
 				67AB39B8209353750006C453 /* TestUtils.swift in Sources */,
