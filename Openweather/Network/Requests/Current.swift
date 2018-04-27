@@ -18,14 +18,15 @@ extension JsonParser {
             let windSpeed = self["wind"]["speed"].getDouble(),
             let windDegree = self["wind"]["deg"].getDouble(),
             let weatherId = self["weather"][0]["id"].getInt(),
+            let weatherMain = self["weather"][0]["main"].getString(),
             let weatherDescription = self["weather"][0]["description"].getString(),
             let lat = self["coord"]["lat"].getDouble(),
             let lon = self["coord"]["lon"].getDouble() {
             let date = Date(timeIntervalSince1970: TimeInterval(dateUTC))
-            return Forecast(id: id, date: date, name: name,
+            return Forecast(id: id, date: date, name: name, units: Forecast.Units.metric,
                             temperature: temperature, humidity: humidity,
                             windSpeed: windSpeed, windDegree: windDegree,
-                            weatherId: weatherId, weatherDescription: weatherDescription,
+                            weatherId: weatherId, weatherMain: weatherMain, weatherDescription: weatherDescription,
                             lat: lat, lon: lon)
         }
         return nil

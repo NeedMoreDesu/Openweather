@@ -19,7 +19,8 @@ class TabBarWireframe: NSObject, HomeScreenRouter, MapRouter {
                       mapVC: MapVC? = nil, mapPresenter: MapPresenter? = nil) {
         self.tabBar = tabBar ?? TabBar.create()
         
-        let homePresenter = homePresenter ?? HomeScreenPresenterImplementation(homeScreenRouter: self)
+        let detailsWireframe = DetailsWireframe()
+        let homePresenter = homePresenter ?? HomeScreenPresenterImplementation(homeScreenRouter: self, homeToDetailsRouter: detailsWireframe)
         let homeVC = homeVC ?? HomeScreenVC.create(presenter: homePresenter)
         
         let mapPresenter = mapPresenter ?? MapPresenterImplementation(mapRouter: self)
@@ -29,6 +30,7 @@ class TabBarWireframe: NSObject, HomeScreenRouter, MapRouter {
 
         let homeNav = UINavigationController(rootViewController: homeVC)
         self.tabBar.addChildViewController(homeNav)
+        detailsWireframe.nav = homeNav
 
         let mapNav = UINavigationController(rootViewController: mapVC)
         self.tabBar.addChildViewController(mapNav)

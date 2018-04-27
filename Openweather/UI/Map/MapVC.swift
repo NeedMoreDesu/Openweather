@@ -18,7 +18,13 @@ protocol MapPresenter {
 class MapVC: UIViewController, MKMapViewDelegate {
     //MARK:- public
     public func updateUI() {
-        
+        mapView.removeAnnotations(mapView.annotations)
+        for item in self.presenter.forecasts {
+            let location = CLLocationCoordinate2D(latitude: item.lat, longitude: item.lon)
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = location
+            mapView.addAnnotation(annotation)
+        }
     }
     public class func create(presenter: MapPresenter) -> MapVC {
         let `self` = Utils.createVC(storyboardId: "Map", vcId: "MapVC") as MapVC
@@ -42,13 +48,7 @@ class MapVC: UIViewController, MKMapViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        mapView.removeAnnotations(mapView.annotations)
-        for item in self.presenter.forecasts {
-            let location = CLLocationCoordinate2D(latitude: item.lat, longitude: item.lon)
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = location
-            mapView.addAnnotation(annotation)
-        }
+        self.updateUI()
     }
     
     //MARK:- actions

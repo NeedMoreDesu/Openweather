@@ -11,7 +11,7 @@ import UIKit
 class URLs: NSObject {
     static let baseURL = "https://api.openweathermap.org/"
     static let appID = "c6e381d8c7ff98f0fee43775817cf6ad"
-    static let defaultParams = "appid=\(appID)&units=metric"
+    static let defaultParams = "appid=\(appID)&units=\(Forecast.Units.metric.rawValue)"
     
     // see http://openweathermap.org/current
     static let current = "\(baseURL)data/2.5/weather"

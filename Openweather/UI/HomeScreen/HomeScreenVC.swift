@@ -11,8 +11,10 @@ import UIKit
 protocol HomeScreenPresenter {
     var title: String { get }
     var cellModels: [HomeScreenCellType] { get }
-    func handleNewButtonClick()
     func updateCellModels()
+
+    func handleNewButtonClick()
+    func forecastClickedAt(index: Int)
 }
 
 class HomeScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -71,8 +73,8 @@ class HomeScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         switch item {
         case .new:
             self.presenter.handleNewButtonClick()
-        default:
-            break
+        case .main(_):
+            self.presenter.forecastClickedAt(index: indexPath.row)
         }
     }
 }
