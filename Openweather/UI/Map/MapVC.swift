@@ -20,10 +20,10 @@ class MapVC: UIViewController, MKMapViewDelegate {
     public func updateUI() {
         
     }
-    public class func create(router: MapRouter) -> MapVC {
-        let vc = Utils.createVC(storyboardId: "Map", vcId: "MapVC") as MapVC
-        vc.setup(router: router)
-        return vc
+    public class func create(presenter: MapPresenter) -> MapVC {
+        let `self` = Utils.createVC(storyboardId: "Map", vcId: "MapVC") as MapVC
+        self.presenter = presenter
+        return self
     }
 
     //MARK:- outlets
@@ -31,9 +31,6 @@ class MapVC: UIViewController, MKMapViewDelegate {
     
     //MARK:- private
     var presenter: MapPresenter!
-    func setup(router: MapRouter) {
-        self.presenter = MapPresenterImplementation(mapRouter: router)
-    }
     
     //MARK:- lifecycle
     override func viewDidLoad() {

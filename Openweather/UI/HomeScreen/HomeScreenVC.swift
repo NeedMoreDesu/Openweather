@@ -20,10 +20,10 @@ class HomeScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     public func updateUI() {
         self.tableView.reloadData()
     }
-    public class func create(router: HomeScreenRouter) -> HomeScreenVC {
-        let vc = Utils.createVC(storyboardId: "Home", vcId: "HomeScreenVC") as HomeScreenVC
-        vc.setup(router: router)
-        return vc
+    public class func create(presenter: HomeScreenPresenter) -> HomeScreenVC {
+        let `self` = Utils.createVC(storyboardId: "Home", vcId: "HomeScreenVC") as HomeScreenVC
+        self.presenter = presenter
+        return self
     }
     
     //MARK:- outlets
@@ -31,9 +31,6 @@ class HomeScreenVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     //MARK:- private
     var presenter: HomeScreenPresenter!
-    func setup(router: HomeScreenRouter) {
-        self.presenter = HomeScreenPresenterImplementation(homeScreenRouter: router)
-    }
     
     //MARK:- lifecycle
     override func viewDidLoad() {

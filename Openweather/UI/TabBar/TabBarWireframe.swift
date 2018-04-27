@@ -10,24 +10,23 @@ import UIKit
 
 class TabBarWireframe: NSObject, HomeScreenRouter, MapRouter {
     weak var tabBar: TabBar!
-    weak var homeVC: HomeScreenVC!
-    weak var mapVC: MapVC!
     
-    init(tabBar: TabBar? = nil, homeVC: HomeScreenVC? = nil, mapVC: MapVC? = nil) {
+    init(tabBar: TabBar? = nil) {
         self.tabBar = tabBar
-        self.homeVC = homeVC
-        self.mapVC = mapVC
     }
     
-    public func setup() {
+    public func setup(homeVC: HomeScreenVC? = nil, homePresenter: HomeScreenPresenter? = nil,
+                      mapVC: MapVC? = nil, mapPresenter: MapPresenter? = nil) {
         self.tabBar = tabBar ?? TabBar.create()
-        self.homeVC = homeVC ?? HomeScreenVC.create(router: self)
-        self.mapVC = mapVC ?? MapVC.create(router: self)
+        let homePresenter = homePresenter ?? HomeScreenPresenterImplementation(homeScreenRouter: self)
+        let homeVC = homeVC ?? HomeScreenVC.create(presenter: homePresenter)
+        let mapPresenter = mapPresenter ?? MapPresenterImplementation(mapRouter: self)
+        let mapVC = mapVC ?? MapVC.create(presenter: mapPresenter)
 
-        let homeNav = UINavigationController(rootViewController: self.homeVC)
+        let homeNav = UINavigationController(rootViewController: homeVC)
         self.tabBar.addChildViewController(homeNav)
 
-        let mapNav = UINavigationController(rootViewController: self.mapVC)
+        let mapNav = UINavigationController(rootViewController: mapVC)
         self.tabBar.addChildViewController(mapNav)
 
         AppDelegate.shared.window?.rootViewController = tabBar
