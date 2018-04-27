@@ -9,7 +9,6 @@
 import UIKit
 
 protocol HomeUseCase {
-    func save(forecast: Forecast)
     func delete(forecast: Forecast)
     func allForecast() -> [Forecast]
 }
