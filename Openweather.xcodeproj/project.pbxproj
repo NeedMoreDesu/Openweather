@@ -14,6 +14,10 @@
 		6781A4BE20922ABB000F0C80 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6781A4BD20922ABA000F0C80 /* Map.storyboard */; };
 		6781A4C020922ACA000F0C80 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A4BF20922ACA000F0C80 /* MapVC.swift */; };
 		6781A4C320922BF8000F0C80 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A4C220922BF8000F0C80 /* MapPresenter.swift */; };
+		6781A4C620930B1F000F0C80 /* HelpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6781A4C520930B1F000F0C80 /* HelpVC.swift */; };
+		6781A4C820930B2E000F0C80 /* Help.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6781A4C720930B2E000F0C80 /* Help.storyboard */; };
+		6781A4CA20930C47000F0C80 /* Help.html in Resources */ = {isa = PBXBuildFile; fileRef = 6781A4C920930C47000F0C80 /* Help.html */; };
+		6781A4CC20930F11000F0C80 /* styles.css in Resources */ = {isa = PBXBuildFile; fileRef = 6781A4CB20930F11000F0C80 /* styles.css */; };
 		67A86CDC2091CB1300223512 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86CDB2091CB1300223512 /* AppDelegate.swift */; };
 		67A86CDE2091CB1300223512 /* HomeScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86CDD2091CB1300223512 /* HomeScreenVC.swift */; };
 		67A86CE12091CB1300223512 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67A86CDF2091CB1300223512 /* Home.storyboard */; };
@@ -57,6 +61,10 @@
 		6781A4BD20922ABA000F0C80 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
 		6781A4BF20922ACA000F0C80 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		6781A4C220922BF8000F0C80 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
+		6781A4C520930B1F000F0C80 /* HelpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpVC.swift; sourceTree = "<group>"; };
+		6781A4C720930B2E000F0C80 /* Help.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Help.storyboard; sourceTree = "<group>"; };
+		6781A4C920930C47000F0C80 /* Help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Help.html; sourceTree = "<group>"; };
+		6781A4CB20930F11000F0C80 /* styles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
 		67A86CD82091CB1300223512 /* Openweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67A86CDB2091CB1300223512 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		67A86CDD2091CB1300223512 /* HomeScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenVC.swift; sourceTree = "<group>"; };
@@ -150,6 +158,17 @@
 			path = Map;
 			sourceTree = "<group>";
 		};
+		6781A4C420930AFB000F0C80 /* Help */ = {
+			isa = PBXGroup;
+			children = (
+				6781A4C720930B2E000F0C80 /* Help.storyboard */,
+				6781A4C520930B1F000F0C80 /* HelpVC.swift */,
+				6781A4C920930C47000F0C80 /* Help.html */,
+				6781A4CB20930F11000F0C80 /* styles.css */,
+			);
+			path = Help;
+			sourceTree = "<group>";
+		};
 		67A86CCF2091CB1200223512 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +219,7 @@
 				6781A4B320922282000F0C80 /* TabBar */,
 				67A86D23209212D400223512 /* HomeScreen */,
 				6781A4BC20922A9C000F0C80 /* Map */,
+				6781A4C420930AFB000F0C80 /* Help */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -395,10 +415,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6781A4B520922296000F0C80 /* Tabbar.storyboard in Resources */,
+				6781A4C820930B2E000F0C80 /* Help.storyboard in Resources */,
 				67A86CE62091CB1400223512 /* LaunchScreen.storyboard in Resources */,
 				6781A4BE20922ABB000F0C80 /* Map.storyboard in Resources */,
 				67A86CE32091CB1400223512 /* Assets.xcassets in Resources */,
+				6781A4CC20930F11000F0C80 /* styles.css in Resources */,
 				67A86CE12091CB1300223512 /* Home.storyboard in Resources */,
+				6781A4CA20930C47000F0C80 /* Help.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +448,7 @@
 				6781A4C020922ACA000F0C80 /* MapVC.swift in Sources */,
 				67A86D28209213E800223512 /* HomeScreenCellModel.swift in Sources */,
 				67A86D1E2092086000223512 /* UseCaseRequirements.swift in Sources */,
+				6781A4C620930B1F000F0C80 /* HelpVC.swift in Sources */,
 				6781A4BB209223EC000F0C80 /* TabBarWireframe.swift in Sources */,
 				67A86CDC2091CB1300223512 /* AppDelegate.swift in Sources */,
 				67A86D2A209216D900223512 /* HomeScreenPresenter.swift in Sources */,

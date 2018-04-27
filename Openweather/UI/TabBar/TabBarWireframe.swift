@@ -18,16 +18,27 @@ class TabBarWireframe: NSObject, HomeScreenRouter, MapRouter {
     public func setup(homeVC: HomeScreenVC? = nil, homePresenter: HomeScreenPresenter? = nil,
                       mapVC: MapVC? = nil, mapPresenter: MapPresenter? = nil) {
         self.tabBar = tabBar ?? TabBar.create()
+        
         let homePresenter = homePresenter ?? HomeScreenPresenterImplementation(homeScreenRouter: self)
         let homeVC = homeVC ?? HomeScreenVC.create(presenter: homePresenter)
+        
         let mapPresenter = mapPresenter ?? MapPresenterImplementation(mapRouter: self)
         let mapVC = mapVC ?? MapVC.create(presenter: mapPresenter)
+        
+        let helpVC = HelpVC.create()
 
         let homeNav = UINavigationController(rootViewController: homeVC)
         self.tabBar.addChildViewController(homeNav)
 
         let mapNav = UINavigationController(rootViewController: mapVC)
         self.tabBar.addChildViewController(mapNav)
+        
+        let helpNav = UINavigationController(rootViewController: helpVC)
+        self.tabBar.addChildViewController(helpNav)
+        
+        //preload
+        mapVC.view.setNeedsLayout()
+        helpVC.view.setNeedsLayout()
 
         AppDelegate.shared.window?.rootViewController = tabBar
     }
