@@ -40,7 +40,6 @@
 		67A86CE12091CB1300223512 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67A86CDF2091CB1300223512 /* Home.storyboard */; };
 		67A86CE32091CB1400223512 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67A86CE22091CB1400223512 /* Assets.xcassets */; };
 		67A86CE62091CB1400223512 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67A86CE42091CB1400223512 /* LaunchScreen.storyboard */; };
-		67A86CF12091CB1500223512 /* OpenweatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86CF02091CB1500223512 /* OpenweatherTests.swift */; };
 		67A86D002091CCAB00223512 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86CFF2091CCAB00223512 /* NetworkManager.swift */; };
 		67A86D022091D2DC00223512 /* URLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D012091D2DC00223512 /* URLs.swift */; };
 		67A86D042091D69400223512 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D032091D69400223512 /* Forecast.swift */; };
@@ -60,6 +59,7 @@
 		67A86D2A209216D900223512 /* HomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D29209216D900223512 /* HomeScreenPresenter.swift */; };
 		67AB39AC20932DFF0006C453 /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB39AB20932DFF0006C453 /* DateFormatterManager.swift */; };
 		67AB39AE20933C620006C453 /* DetailsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB39AD20933C620006C453 /* DetailsHeaderCell.swift */; };
+		67AB39B020934C480006C453 /* JsonParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB39AF20934C480006C453 /* JsonParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,7 +109,6 @@
 		67A86CE52091CB1400223512 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67A86CE72091CB1400223512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67A86CEC2091CB1500223512 /* OpenweatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenweatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		67A86CF02091CB1500223512 /* OpenweatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenweatherTests.swift; sourceTree = "<group>"; };
 		67A86CF22091CB1500223512 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		67A86CFF2091CCAB00223512 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		67A86D012091D2DC00223512 /* URLs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLs.swift; sourceTree = "<group>"; };
@@ -130,6 +129,7 @@
 		67A86D29209216D900223512 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
 		67AB39AB20932DFF0006C453 /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
 		67AB39AD20933C620006C453 /* DetailsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeaderCell.swift; sourceTree = "<group>"; };
+		67AB39AF20934C480006C453 /* JsonParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,7 +295,7 @@
 		67A86CEF2091CB1500223512 /* OpenweatherTests */ = {
 			isa = PBXGroup;
 			children = (
-				67A86CF02091CB1500223512 /* OpenweatherTests.swift */,
+				67AB39AF20934C480006C453 /* JsonParserTests.swift */,
 				67A86CF22091CB1500223512 /* Info.plist */,
 			);
 			path = OpenweatherTests;
@@ -579,7 +579,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67A86CF12091CB1500223512 /* OpenweatherTests.swift in Sources */,
+				67AB39B020934C480006C453 /* JsonParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
