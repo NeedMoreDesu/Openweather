@@ -59,6 +59,7 @@
 		67A86D28209213E800223512 /* HomeScreenCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D27209213E800223512 /* HomeScreenCellModel.swift */; };
 		67A86D2A209216D900223512 /* HomeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67A86D29209216D900223512 /* HomeScreenPresenter.swift */; };
 		67AB39AC20932DFF0006C453 /* DateFormatterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB39AB20932DFF0006C453 /* DateFormatterManager.swift */; };
+		67AB39AE20933C620006C453 /* DetailsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB39AD20933C620006C453 /* DetailsHeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		67A86D27209213E800223512 /* HomeScreenCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenCellModel.swift; sourceTree = "<group>"; };
 		67A86D29209216D900223512 /* HomeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenPresenter.swift; sourceTree = "<group>"; };
 		67AB39AB20932DFF0006C453 /* DateFormatterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatterManager.swift; sourceTree = "<group>"; };
+		67AB39AD20933C620006C453 /* DetailsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				6781A4CD20930F90000F0C80 /* Details.storyboard */,
 				6781A4D020930FB7000F0C80 /* DetailsVC.swift */,
 				6781A4D220930FD2000F0C80 /* DetailsCell.swift */,
+				67AB39AD20933C620006C453 /* DetailsHeaderCell.swift */,
 				6781A4DC2093259E000F0C80 /* DetailsWireframe.swift */,
 			);
 			path = Details;
@@ -542,6 +545,7 @@
 				6781A4C320922BF8000F0C80 /* MapPresenter.swift in Sources */,
 				6781A4D320930FD2000F0C80 /* DetailsCell.swift in Sources */,
 				67A86D002091CCAB00223512 /* NetworkManager.swift in Sources */,
+				67AB39AE20933C620006C453 /* DetailsHeaderCell.swift in Sources */,
 				6781A4B720922360000F0C80 /* TabBar.swift in Sources */,
 				67A86CDE2091CB1300223512 /* HomeScreenVC.swift in Sources */,
 				67A86D1C209205E200223512 /* HomeUseCase.swift in Sources */,

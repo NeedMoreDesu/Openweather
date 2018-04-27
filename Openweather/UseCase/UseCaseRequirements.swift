@@ -19,6 +19,6 @@ protocol CurrentRouter {
 }
 
 protocol Forecast5Router {
-    static func forecast5(params: [URLs.Params], completion: @escaping ((_ forecast5: [Forecast]?, _ error: Error?) -> Void))
+    static func forecast5(params: [URLs.Params], completion: @escaping ((_ forecast5: [Forecast]?, _ error: Error?) -> Void), basedOn: Forecast?)
 }
 

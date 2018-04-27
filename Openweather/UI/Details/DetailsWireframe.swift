@@ -14,6 +14,7 @@ class DetailsWireframe: NSObject, HomeToDetailsRouter {
     func showDetails(forecast: Forecast) {
         let detailsPresenter = DetailsPresenterImplementation(forecast: forecast)
         let detailsVC = DetailsVC.create(presenter: detailsPresenter)
+        detailsPresenter.view = detailsVC
         self.nav.pushViewController(detailsVC, animated: true)
     }
     

@@ -59,8 +59,8 @@ struct DetailsCellModel {
             UIImage(named: forecast.weatherDescription.lowercased() + ".jpg") ??
             UIImage(named: forecast.weatherMain.lowercased() + ".jpg")
         return DetailsCellModel(temperature: "\(forecast.temperature) \(forecast.units.temperatureSign())",
-            humidity: "Humidity: \(forecast.humidity)%",
-            wind: "Wind: \(forecast.windSpeed) \(forecast.units.speedUnits()) \(forecast.windDirection())",
+            humidity: "Humidity:\n\(forecast.humidity)%",
+            wind: "Wind:\n\(forecast.windSpeed) \(forecast.units.speedUnits())\n\(forecast.windDirection())",
             time: DateFormatterManager.shared.dateToTime(forecast.date),
             bgImage: image)
     }

@@ -9,10 +9,9 @@
 import UIKit
 
 extension JsonParser {
-    func parseCurrent() -> Forecast? {
-        if let id = self["id"].getInt(),
-            let dateUTC = self["dt"].getInt(),
-            let name = self["name"].getString(),
+    func parseCurrent(basedOn: Forecast? = nil) -> Forecast? {
+        if let dateUTC = self["dt"].getInt(),
+            let name = self["name"].getString() ?? basedOn?.name,
             let temperature = self["main"]["temp"].getDouble(),
             let humidity = self["main"]["humidity"].getDouble(),
             let windSpeed = self["wind"]["speed"].getDouble(),
@@ -20,10 +19,10 @@ extension JsonParser {
             let weatherId = self["weather"][0]["id"].getInt(),
             let weatherMain = self["weather"][0]["main"].getString(),
             let weatherDescription = self["weather"][0]["description"].getString(),
-            let lat = self["coord"]["lat"].getDouble(),
-            let lon = self["coord"]["lon"].getDouble() {
+            let lat = self["coord"]["lat"].getDouble() ?? basedOn?.lat,
+            let lon = self["coord"]["lon"].getDouble() ?? basedOn?.lon {
             let date = Date(timeIntervalSince1970: TimeInterval(dateUTC))
-            return Forecast(id: id, date: date, name: name, units: Forecast.Units.metric,
+            return Forecast(date: date, name: name, units: Forecast.Units.metric,
                             temperature: temperature, humidity: humidity,
                             windSpeed: windSpeed, windDegree: windDegree,
                             weatherId: weatherId, weatherMain: weatherMain, weatherDescription: weatherDescription,

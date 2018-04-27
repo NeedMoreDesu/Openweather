@@ -18,4 +18,19 @@ class DateFormatterManager: NSObject {
         formatter.dateFormat = "HH:mm"
         return formatter.string(from: date)
     }
+    
+    public func dateToDay(_ date: Date) -> String {
+        formatter.dateFormat = "dd MMMM yyyy";
+        return formatter.string(from: date)
+    }
+}
+
+extension Date {
+    func toTime() -> String {
+        return DateFormatterManager.shared.dateToTime(self)
+    }
+    
+    func toDay() -> String {
+        return DateFormatterManager.shared.dateToDay(self)
+    }
 }

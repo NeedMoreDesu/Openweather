@@ -26,6 +26,6 @@ class DetailsUseCase: NSObject {
     }
 
     func forecast5(completion: @escaping ((_ current: [Forecast]?, _ error: Error?) -> Void)) {
-        self.forecast5Router.forecast5(params: [.location(lat: self.currentForecast.lat, lon: self.currentForecast.lon)], completion: completion)
+        self.forecast5Router.forecast5(params: [.location(lat: self.currentForecast.lat, lon: self.currentForecast.lon)], completion: completion, basedOn: self.currentForecast)
     }
 }

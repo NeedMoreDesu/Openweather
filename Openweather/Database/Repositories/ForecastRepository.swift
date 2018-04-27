@@ -11,7 +11,6 @@ import CoreData
 
 extension DBForecast {
     func fromPONSO(_ ponso: Forecast) {
-        self.id = Int32(ponso.id)
         self.date = ponso.date
         self.name = ponso.name
         self.temperature = ponso.temperature
@@ -25,7 +24,7 @@ extension DBForecast {
         self.units = ponso.units.rawValue
     }
     func toPONSO() -> Forecast {
-        return Forecast(id: Int(self.id), date: self.date!, name: self.name!, units: Forecast.Units(rawValue: self.units!)!,
+        return Forecast(date: self.date!, name: self.name!, units: Forecast.Units(rawValue: self.units!)!,
                         temperature: self.temperature, humidity: self.humidity,
                         windSpeed: self.windSpeed, windDegree: self.windDegree,
                         weatherId: Int(self.weatherId), weatherMain: self.weatherMain!, weatherDescription: self.weatherDescription!,
@@ -42,7 +41,7 @@ extension DatabaseManager: ForecastRepository {
     private func find(_ forecast: Forecast) -> DBForecast? {
         let request = NSFetchRequest<DBForecast>(entityName: "Forecast")
         request.fetchLimit = 1
-        request.predicate = NSPredicate(format: "id = \(forecast.id)")
+        request.predicate = NSPredicate(format: "date = %@ AND lat = \(forecast.lat) AND lon = \(forecast.lon)", forecast.date as CVarArg)
         let result = try? self.managedObjectContext.fetch(request)
         return result?.first
     }

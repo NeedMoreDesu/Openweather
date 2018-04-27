@@ -14,7 +14,6 @@ class Forecast: NSObject {
         case metric
     }
     
-    let id: Int
     let date: Date
     let name: String
     let units: Units
@@ -32,12 +31,11 @@ class Forecast: NSObject {
     let lat: Double
     let lon: Double
     
-    init(id: Int, date: Date, name: String, units: Units,
+    init(date: Date, name: String, units: Units,
          temperature: Double, humidity: Double,
          windSpeed: Double, windDegree: Double,
          weatherId: Int, weatherMain: String, weatherDescription: String,
          lat: Double, lon: Double) {
-        self.id = id
         self.date = date
         self.name = name
         self.units = units
