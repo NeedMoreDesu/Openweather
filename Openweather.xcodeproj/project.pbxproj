@@ -64,6 +64,7 @@
 		67AB39B4209351460006C453 /* current1.json in Resources */ = {isa = PBXBuildFile; fileRef = 67AB39B3209351460006C453 /* current1.json */; };
 		67AB39B62093516C0006C453 /* current2.json in Resources */ = {isa = PBXBuildFile; fileRef = 67AB39B52093516C0006C453 /* current2.json */; };
 		67AB39B8209353750006C453 /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67AB39B7209353750006C453 /* TestUtils.swift */; };
+		67F50EB520935E14007942EF /* MapInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F50EB420935E14007942EF /* MapInteractorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,6 +139,7 @@
 		67AB39B3209351460006C453 /* current1.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = current1.json; sourceTree = "<group>"; };
 		67AB39B52093516C0006C453 /* current2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = current2.json; sourceTree = "<group>"; };
 		67AB39B7209353750006C453 /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
+		67F50EB420935E14007942EF /* MapInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInteractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +308,7 @@
 				67AB39B7209353750006C453 /* TestUtils.swift */,
 				67AB39AF20934C480006C453 /* JsonParserTests.swift */,
 				67AB39B1209350B60006C453 /* ParsingCurrentTests.swift */,
+				67F50EB420935E14007942EF /* MapInteractorTests.swift */,
 				67AB39B3209351460006C453 /* current1.json */,
 				67AB39B52093516C0006C453 /* current2.json */,
 				67A86CF22091CB1500223512 /* Info.plist */,
@@ -595,6 +598,7 @@
 			files = (
 				67AB39B2209350B60006C453 /* ParsingCurrentTests.swift in Sources */,
 				67AB39B8209353750006C453 /* TestUtils.swift in Sources */,
+				67F50EB520935E14007942EF /* MapInteractorTests.swift in Sources */,
 				67AB39B020934C480006C453 /* JsonParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

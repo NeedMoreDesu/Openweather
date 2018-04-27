@@ -9,21 +9,21 @@
 import UIKit
 
 class HomeInteractor: NSObject, HomeUseCase {
-    var timestampRouter: ForecastRepository
+    var forecastRepository: ForecastRepository
     
-    init(timestampRouter: ForecastRepository = DatabaseManager.shared) {
-        self.timestampRouter = timestampRouter
+    init(forecastRepository: ForecastRepository = DatabaseManager.shared) {
+        self.forecastRepository = forecastRepository
     }
     
     func save(forecast: Forecast) {
-        self.timestampRouter.save(forecast)
+        self.forecastRepository.save(forecast)
     }
 
     func delete(forecast: Forecast) {
-        self.timestampRouter.delete(forecast)
+        self.forecastRepository.delete(forecast)
     }
 
     func allForecast() -> [Forecast] {
-        return self.timestampRouter.allForecast()
+        return self.forecastRepository.allForecast()
     }
 }
