@@ -24,7 +24,7 @@ class DetailsPresenterImplementation: NSObject, DetailsPresenter {
     init(detailsUseCase: DetailsUseCase? = nil, forecast: Forecast) {
         self.detailsUseCase = detailsUseCase ?? DetailsUseCase(forecast: forecast)
         self.title = forecast.name
-        self.mainCellModel = DetailsCellModel.fromForecast(forecast)
+        self.mainCellModel = DetailsCellModel.fromForecast(forecast, stripTime: true)
         self.forecastDayTitles = []
         self.forecastsByDay = []
         
@@ -32,7 +32,7 @@ class DetailsPresenterImplementation: NSObject, DetailsPresenter {
         
         self.detailsUseCase.current(completion: { (forecast, error) in
             if let forecast = forecast {
-                self.mainCellModel = DetailsCellModel.fromForecast(forecast)
+                self.mainCellModel = DetailsCellModel.fromForecast(forecast, stripTime: true)
                 self.view.updateUI()
             }
         })

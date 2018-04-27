@@ -54,14 +54,14 @@ struct DetailsCellModel {
     let time: String
     let bgImage: UIImage?
     
-    static func fromForecast(_ forecast: Forecast) -> DetailsCellModel {
+    static func fromForecast(_ forecast: Forecast, stripTime: Bool = false) -> DetailsCellModel {
         let image = UIImage(named: "\(forecast.weatherId)" + ".jpg") ??
             UIImage(named: forecast.weatherDescription.lowercased() + ".jpg") ??
             UIImage(named: forecast.weatherMain.lowercased() + ".jpg")
         return DetailsCellModel(temperature: "\(forecast.temperature) \(forecast.units.temperatureSign())",
             humidity: "Humidity:\n\(forecast.humidity)%",
             wind: "Wind:\n\(forecast.windSpeed) \(forecast.units.speedUnits())\n\(forecast.windDirection())",
-            time: DateFormatterManager.shared.dateToTime(forecast.date),
+            time: stripTime ? "" : DateFormatterManager.shared.dateToTime(forecast.date),
             bgImage: image)
     }
 }
